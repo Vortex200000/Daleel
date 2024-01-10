@@ -7,14 +7,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUp extends StatefulWidget {
-
   @override
   State<SignUp> createState() => _SignUpState();
 }
 
 class _SignUpState extends State<SignUp> {
-   GlobalKey<FormState> SignKey = GlobalKey<FormState>();
-
+  GlobalKey<FormState> SignKey = GlobalKey<FormState>();
 
   // const Login({super.key});
   bool flag = false;
@@ -102,7 +100,6 @@ class _SignUpState extends State<SignUp> {
                       height: passHeight,
                       child: TextFormField(
                         style: TextStyle(color: Colors.white),
-
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'This field is required';

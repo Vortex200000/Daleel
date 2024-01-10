@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 import '../constants.dart';
@@ -27,7 +28,7 @@ class CustomGridViewItem extends StatelessWidget {
                   children: [
                     Image.asset(
                       itemModel.image,
-                      height: 100,
+                      height: 100.h,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5),
@@ -73,11 +74,11 @@ class CustomGridViewItem extends StatelessWidget {
                         color: kMainColor.withOpacity(.5),
                       ),
                     ),
-                    const SizedBox(height: 8),
+                     SizedBox(height: 8.h),
                   ],
                 ),
               ),
-              const CustomButton(text: "Add to card"),
+              const CustomButton(text: "Add to cart"),
             ],
           ),
         ),

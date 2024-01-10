@@ -16,8 +16,10 @@ class CustomListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8),
       child: GridView.builder(
+        physics: BouncingScrollPhysics(),
         itemCount: list.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+
           crossAxisCount: 2,
           childAspectRatio: 1 / 2.09,
           crossAxisSpacing: 8,

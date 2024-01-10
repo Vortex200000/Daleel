@@ -35,6 +35,7 @@ class _BottomNavigationBarView2State extends State<BottomNavigationBarView2>
         toolbarHeight: 5,
         backgroundColor: kBackgroundColor,
         bottom: TabBar(
+
           indicatorColor: kMainColor,
           indicatorWeight: 8,
           dividerColor: Colors.transparent,
@@ -67,6 +68,7 @@ class _BottomNavigationBarView2State extends State<BottomNavigationBarView2>
           return true;
         },
         child: TabBarView(
+          physics: BouncingScrollPhysics(),
           controller: tabController,
           // physics: NeverScrollableScrollPhysics(),
           children: [

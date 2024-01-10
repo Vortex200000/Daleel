@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constants.dart';
 import '../widgets/bottom_navigation_bar_view1.dart';
@@ -21,6 +22,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: PageScrollPhysics(),
         controller: pageController,
         onPageChanged: (index) {
           setState(() {
@@ -42,7 +44,7 @@ class _HomeViewState extends State<HomeView> {
                 curve: Curves.ease);
           });
         },
-        height: 50,
+        height: 50.h,
         buttonBackgroundColor: kMainColor,
         backgroundColor: Colors.transparent,
         color: kMainColor,

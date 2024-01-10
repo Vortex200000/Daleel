@@ -8,7 +8,9 @@ class CustomListView extends StatelessWidget {
     super.key,
     required this.list,
   });
+
   final List list;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -8,13 +8,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatefulWidget {
-  static var logKey = GlobalKey<FormState>();
 
   @override
   State<Login> createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
+  GlobalKey<FormState> logKey = GlobalKey<FormState>();
+
   // const Login({super.key});
   bool flag = false;
   double passWidth = 300.w;
@@ -30,7 +31,7 @@ class _LoginState extends State<Login> {
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Form(
-          key: Login.logKey,
+          key: logKey,
           child: Column(
             children: [
               SizedBox(
@@ -166,7 +167,7 @@ class _LoginState extends State<Login> {
                       height: 50.h,
                       child: ElevatedButton(
                         onPressed: () {
-                          if (Login.logKey.currentState!.validate()) {
+                          if (logKey.currentState!.validate()) {
                             Navigator.pushAndRemoveUntil(
                                 context,
                                 MaterialPageRoute(

@@ -58,6 +58,7 @@ class _SignUpState extends State<SignUp> {
                       width: emailWidth,
                       height: emailHeight,
                       child: TextFormField(
+                        style: TextStyle(color: Colors.white),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'This field is required';
@@ -100,6 +101,8 @@ class _SignUpState extends State<SignUp> {
                       width: passWidth,
                       height: passHeight,
                       child: TextFormField(
+                        style: TextStyle(color: Colors.white),
+
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'This field is required';

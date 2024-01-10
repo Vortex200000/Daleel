@@ -1,3 +1,4 @@
+import 'package:dlaeelel23aka/features/HomeScreen/presentation/views/home_view.dart';
 import 'package:dlaeelel23aka/features/SignUpScreen/presentation/pages/SignUpScreen.dart';
 import 'package:dlaeelel23aka/features/SplashScreen/SplshScreen.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,6 +10,7 @@ class RoutesNames {
   static const String login = 'login';
   static const String signUp = '/';
   static const String splash = 'SplashScreen';
+  static const String home = 'Home';
 }
 
 class AppRouter {
@@ -25,6 +27,10 @@ class AppRouter {
       case RoutesNames.splash:
         return MaterialPageRoute(
           builder: (context) => SplashScreen(),
+        );
+      case RoutesNames.home:
+        return MaterialPageRoute(
+          builder: (context) => HomeView(),
         );
       default:
         return MaterialPageRoute(
